@@ -1,0 +1,2 @@
+# pgsql-queries
+Query collection
