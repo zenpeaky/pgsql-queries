@@ -1,5 +1,6 @@
--- AGGREGATE
+-- QUERY BELOW WILL HAVE SAME RESULT
 
+-- AGGREGATE
 SELECT 
   date_trunc('month', ord_date) AS bulan, 
   SUM(CASE WHEN ord_result = 'ORDER' OR ord_result = 'ACC' OR ord_result = 'SSU' THEN 1 ELSE 0 END) AS "ORDER",
@@ -17,7 +18,6 @@ ORDER BY
   bulan
 
 -- CTE
-
 WITH cte AS (
   SELECT 
     date_trunc('month', ord_date) AS bulan, 
